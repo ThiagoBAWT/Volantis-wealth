@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volantis Wealth | Clareza para decidir. Direção para evoluir.</title>
+<meta name="description" content="Educação financeira e planejamento patrimonial independente para construir patrimônio, preparar a aposentadoria e proteger a família.">
+<meta property="og:title" content="Volantis Wealth">
+<meta property="og:description" content="Clareza para decidir. Direção para evoluir.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/lago.jpg">
+<link rel="icon" type="image/png" href="volantis-wealth-icone.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#073d2e;--green-deep:#04261d;--green-soft:#12543f;--ivory:#f4f0e6;--paper:#fbf9f4;--sand:#e7decb;
+  --brass:#b8935a;--brass-light:#d9bd8b;--brass-ink:#76592c;--mist:#bcd0da;--mist-light:#dde8ed;--sage:#c9d8c6;
+  --ink:#14231e;--ink-soft:#47564f;--white:#fff;
+  --line:rgba(7,61,46,.16);--line-light:rgba(244,240,230,.22);--glass:rgba(251,249,244,.16);--glass-line:rgba(255,255,255,.38);
+  --shade:rgba(4,38,29,.82);--shade-0:rgba(4,38,29,0);
+  --serif:'Libre Caslon Display',Georgia,serif;--text:'Libre Caslon Text',Georgia,serif;--sans:'Figtree',system-ui,sans-serif;
+  --fs-hero:clamp(46px,6vw,94px);--fs-h2:clamp(36px,4.6vw,68px);--fs-h3:clamp(25px,2.3vw,34px);--fs-lead:clamp(17px,1.35vw,20px);
+  --fs-body:16px;--fs-small:14px;--track:-.018em;--track-wide:.08em;
+  --s1:8px;--s2:16px;--s3:24px;--s4:clamp(28px,3.4vw,48px);--s5:clamp(48px,6vw,88px);--sec:clamp(84px,10vw,150px);
+  --gutter:clamp(20px,5vw,76px);--frame:clamp(8px,1.2vw,18px);--max:1320px;
+  --r-sm:6px;--r-md:14px;--r-lg:24px;--r-pill:100px;
+  --e1:0 1px 2px rgba(4,38,29,.08),0 2px 8px rgba(4,38,29,.05);
+  --e2:0 2px 4px rgba(4,38,29,.07),0 12px 28px -8px rgba(4,38,29,.18);
+  --e3:0 4px 8px rgba(4,38,29,.08),0 28px 56px -18px rgba(4,38,29,.32);
+  --e4:0 8px 18px rgba(0,0,0,.16),0 46px 80px -28px rgba(0,0,0,.5);
+  --e-inner:inset 0 1px 0 rgba(255,255,255,.28);
+  --out:cubic-bezier(.16,1,.3,1);--in-out:cubic-bezier(.65,0,.35,1);--soft:cubic-bezier(.25,.8,.35,1);--spring:cubic-bezier(.34,1.45,.64,1);
+  --t-fast:.22s;--t-med:.5s;--t-slow:1s;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font:400 var(--fs-body)/1.65 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.06;letter-spacing:var(--track);text-wrap:balance}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+.wrap{width:min(var(--max),100% - 2 * var(--gutter));margin-inline:auto}
+.lead{font-size:var(--fs-lead);color:var(--ink-soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 26px;border-radius:var(--r-pill);font:600 15px var(--sans);transition:transform var(--t-fast) var(--spring),box-shadow var(--t-med) var(--out),background var(--t-fast) var(--soft),color var(--t-fast) var(--soft)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn i{font-style:normal;transition:transform var(--t-med) var(--out)}
+.btn:hover i{transform:translateX(4px)}
+.btn-brass{background:var(--brass-light);color:var(--green-deep);box-shadow:var(--e2)}
+.btn-brass:hover{background:var(--ivory);box-shadow:var(--e3)}
+.btn-line{border:1px solid var(--line-light);color:var(--ivory)}
+.btn-line:hover{background:var(--glass)}
+
+/* HERO */
+.hero{min-height:100svh;padding:var(--frame);display:flex;flex-direction:column;gap:var(--frame)}
+.panel{flex:1;display:grid;grid-template-rows:auto 1fr;background:var(--green);color:var(--ivory);border-radius:var(--r-lg);overflow:hidden}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin:0 var(--s4);padding:18px 0;border-bottom:1px solid var(--line-light)}
+.nav .logo{width:clamp(138px,13vw,180px);height:auto}
+.nav ul{display:flex;gap:var(--s4);list-style:none;font-size:15px}
+.nav ul a{padding:8px 0;background:linear-gradient(var(--brass-light),var(--brass-light)) left bottom/0 1px no-repeat;transition:background-size var(--t-med) var(--out)}
+.nav ul a:hover{background-size:100% 1px}
+.nav .btn{min-height:42px;padding:0 20px;font-size:14px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:var(--s4);padding:var(--s4);min-height:0}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:var(--s3);padding-block:var(--s2)}
+.hero h1{font-size:var(--fs-hero);line-height:1}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.08em}
+.hero h1 span b{display:block;font-weight:400;animation:rise var(--t-slow) var(--out) both}
+.hero h1 span:nth-child(2) b{animation-delay:.12s;color:var(--brass-light)}
+.hero-copy .lead{color:var(--mist-light);max-width:48ch;animation:fade var(--t-slow) var(--soft) .35s both}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;animation:fade var(--t-slow) var(--soft) .5s both}
+.hero-photo{position:relative;border-radius:var(--r-md);overflow:hidden;min-height:340px;box-shadow:var(--e4)}
+.hero-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;animation:settle 2.2s var(--out) both}
+.glass{position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:center;gap:var(--s2);padding:18px 20px;border-radius:var(--r-md);background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(18px) saturate(1.35);-webkit-backdrop-filter:blur(18px) saturate(1.35);box-shadow:var(--e-inner);color:var(--white);animation:lift var(--t-slow) var(--out) .7s both}
+.glass img{width:42px;height:auto;flex:none;animation:float 6s var(--in-out) infinite}
+.glass strong{display:block;font:400 21px/1.2 var(--text)}
+.glass span{font-size:var(--fs-small)}
+.disclaimer{padding:4px var(--s4) 8px;font-size:15px;line-height:1.6;color:var(--ink)}
+.disclaimer a{text-decoration:underline;text-underline-offset:3px}
+
+section.block{padding-block:var(--sec)}
+
+/* SOBRE */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);align-items:center}
+.about-text{display:flex;flex-direction:column;gap:var(--s3)}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.facts div{padding:var(--s3) var(--s2) var(--s3) 0;border-bottom:1px solid var(--line)}
+.facts div:nth-child(even){padding-left:var(--s3);border-left:1px solid var(--line)}
+.facts b{display:block;font:400 var(--fs-h3)/1.15 var(--serif);color:var(--green)}
+.facts span{font-size:var(--fs-small);color:var(--ink-soft)}
+.portrait{position:relative;width:100%;max-width:560px;justify-self:end;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--e3)}
+.portrait>img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;transition:transform var(--t-slow) var(--out)}
+.portrait:hover>img{transform:scale(1.03)}
+.portrait figcaption{position:absolute;left:16px;bottom:16px;padding:12px 20px;border-radius:var(--r-md);background:var(--shade);border:1px solid var(--glass-line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--e-inner);color:var(--white);line-height:1.35}
+.portrait figcaption strong{display:block;font:400 21px/1.25 var(--text)}
+.portrait figcaption span{font-size:var(--fs-small)}
+
+/* ESPECIALIDADES */
+.spec{background:var(--green-deep);color:var(--ivory);overflow:clip}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s5)}
+.head h2{max-width:17ch}
+.head p{max-width:40ch}
+.spec .head p{color:var(--mist)}
+.belt{position:relative;height:540px;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.belt.drag{cursor:grabbing}
+.card{position:absolute;left:50%;top:10px;width:min(360px,80vw);height:500px;border-radius:var(--r-md);overflow:hidden;background:var(--green-soft);box-shadow:var(--e4);will-change:transform}
+.card img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform var(--t-slow) var(--out)}
+.card:hover img{transform:scale(1.06)}
+.card::after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(var(--shade-0),var(--shade) 55%,var(--green-deep));pointer-events:none}
+.card div{position:absolute;z-index:1;left:24px;right:24px;bottom:24px}
+.card h3{font-size:30px;margin-bottom:10px}
+.card p{font-size:15px;line-height:1.55;color:var(--mist-light)}
+.card small{display:block;margin-top:10px;font-size:13px;color:var(--brass-light)}
+.controls{display:flex;justify-content:center;align-items:center;gap:var(--s2);margin-top:var(--s3);font-size:var(--fs-small)}
+.round{width:48px;height:48px;border-radius:50%;border:1px solid currentColor;background:transparent;color:inherit;font-size:18px;cursor:pointer;transition:background var(--t-fast) var(--soft),color var(--t-fast) var(--soft),transform var(--t-fast) var(--spring)}
+.round:hover{background:var(--brass-light);color:var(--green-deep);transform:scale(1.07)}
+
+/* PARA QUEM: painel arrastavel que troca de cor */
+.who{--bg:var(--mist);--fg:var(--green-deep);background:var(--bg);color:var(--fg);overflow:clip;transition:background-color .7s var(--soft),color .4s var(--soft)}
+.who[data-tone="1"]{--bg:var(--sage)}
+.who[data-tone="2"]{--bg:var(--brass-light)}
+.who[data-tone="3"]{--bg:var(--green);--fg:var(--ivory)}
+.stage{display:grid;grid-template-columns:.95fr 1.05fr;gap:var(--s5);align-items:center}
+.who-info{display:flex;flex-direction:column;gap:var(--s3)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{min-height:44px;padding:0 18px;border-radius:var(--r-pill);border:1px solid currentColor;background:transparent;color:inherit;font:500 14px var(--sans);cursor:pointer;transition:background var(--t-fast) var(--soft),color var(--t-fast) var(--soft)}
+.tabs button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.who-info .controls{justify-content:flex-start;margin:0}
+.deck{position:relative;height:clamp(440px,44vw,560px);touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.deck:active{cursor:grabbing}
+.slide{position:absolute;inset:0 56px 0 0;display:grid;grid-template-rows:1fr auto;border-radius:var(--r-lg);overflow:hidden;background:var(--paper);color:var(--ink);box-shadow:var(--e3);transform-origin:100% 50%;transition:transform .6s var(--out),opacity .45s var(--soft)}
+.slide.live{transition:none}
+.slide img{width:100%;height:100%;min-height:0;object-fit:cover;pointer-events:none}
+.slide div{padding:24px 28px 28px}
+.slide h3{margin-bottom:8px;color:var(--green)}
+.slide p{color:var(--ink-soft)}
+
+/* ETAPAS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);list-style:none}
+.steps li{display:flex;flex-direction:column;justify-content:space-between;gap:var(--s5);min-height:320px;padding:28px 24px;border-radius:var(--r-md);background:var(--paper);box-shadow:var(--e1);transition:background var(--t-med) var(--soft),color var(--t-med) var(--soft),transform var(--t-med) var(--out),box-shadow var(--t-med) var(--out)}
+.steps li:hover{background:var(--green);color:var(--ivory);transform:translateY(-8px);box-shadow:var(--e3)}
+.steps em{font:italic 400 24px var(--text);color:var(--brass-ink);transition:color var(--t-med) var(--soft)}
+.steps li:hover em{color:var(--brass-light)}
+.steps h3{font-size:29px;margin-bottom:10px}
+.steps p{font-size:15px;color:var(--ink-soft);transition:color var(--t-med) var(--soft)}
+.steps li:hover p{color:var(--mist-light)}
+
+/* MISSAO, VISAO, VALORES */
+.purpose{background:var(--sand)}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin-bottom:var(--sec)}
+.mv article{border-top:1px solid var(--green);padding-top:var(--s3)}
+.mv h2{font-size:var(--fs-h3);color:var(--green);margin-bottom:var(--s2)}
+.mv p{font:400 clamp(19px,1.8vw,26px)/1.55 var(--text)}
+.values{list-style:none;border-top:1px solid var(--line)}
+.values li{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);align-items:center;padding:26px var(--s3);border-bottom:1px solid var(--line);background:linear-gradient(var(--green),var(--green)) left/0 100% no-repeat;transition:background-size var(--t-med) var(--in-out),color var(--t-med) var(--soft)}
+.values li:hover{background-size:100% 100%;color:var(--ivory)}
+.values strong{font:400 var(--fs-h3)/1.1 var(--serif)}
+
+/* CONTATO */
+.contact{position:relative;isolation:isolate;min-height:760px;display:flex;align-items:center;color:var(--white)}
+.contact>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.contact::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,var(--shade),var(--shade-0) 80%)}
+.contact-box{max-width:640px;padding:var(--s5) var(--s4);border-radius:var(--r-lg);background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:var(--e4),var(--e-inner)}
+.contact-box p{margin:var(--s3) 0 var(--s4);font-size:var(--fs-lead)}
+.contact-box .hero-cta{animation:none}
+
+footer{background:var(--green-deep);color:var(--ivory);padding-top:var(--s5);overflow:hidden}
+.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--s4);padding-bottom:var(--s4)}
+.foot img{width:220px;height:auto}
+.foot h3{font-size:22px;color:var(--brass-light);margin-bottom:10px}
+.foot a{display:block;padding:4px 0;overflow-wrap:anywhere}
+.foot a:hover{color:var(--brass-light)}
+.legal{border-top:1px solid var(--line-light);padding-block:var(--s3);font-size:15px;color:var(--mist-light)}
+.legal a{display:inline;text-decoration:underline}
+.giant{font:400 clamp(86px,24.4vw,400px)/.74 var(--serif);letter-spacing:var(--track);text-align:center;color:var(--green-soft);white-space:nowrap;user-select:none}
+
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity var(--t-slow) var(--soft),transform var(--t-slow) var(--out)}
+.js [data-reveal].in{opacity:1;transform:none}
+
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes lift{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.14)}to{transform:scale(1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.glass img{animation-duration:14s}}
+
+@media (max-width:1000px){
+  .portrait{justify-self:center}
+  .nav ul{display:none}
+  .hero-grid,.about,.stage,.mv{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .nav{margin:0 20px}.nav .btn{padding:0 14px}
+  .hero-grid{padding:20px}
+  .disclaimer{padding-inline:12px}
+  .steps,.facts,.values li{grid-template-columns:1fr}
+  .facts div:nth-child(even){padding-left:0;border-left:0}
+  .steps li{min-height:0;gap:var(--s3)}
+  .values li{gap:6px;padding-inline:14px}
+  .slide{inset:0 28px 0 0}
+  .deck{height:500px}
+  .contact-box{padding:36px 22px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hero" id="inicio">
+  <div class="panel">
+    <nav class="nav" aria-label="Principal">
+      <a href="#inicio"><img class="logo" src="volantis-wealth-logo-branco.png" alt="Volantis Wealth" width="1600" height="570"></a>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#para-quem">Para quem</a></li>
+        <li><a href="#como">Como funciona</a></li>
+      </ul>
+      <a class="btn btn-line" href="#contato">Contato</a>
+    </nav>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1><span><b>Clareza para decidir.</b></span><span><b>Direção para evoluir.</b></span></h1>
+        <p class="lead">Planejamento patrimonial independente para quem quer construir patrimônio, preparar a aposentadoria e proteger a família.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brass" href="https://wa.me/5553999425884" target="_blank" rel="noopener">Agendar uma conversa <i aria-hidden="true">→</i></a>
+          <a class="btn btn-line" href="#especialidades">Ver especialidades</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/lago.jpg" alt="Lago ao amanhecer, com montanhas e céu dourado" width="960" height="640" fetchpriority="high">
+        <div class="glass">
+          <img src="volantis-wealth-icone-branco.png" alt="" width="512" height="512">
+          <p><strong>Atendimento individual</strong><span>Com Helton Costa, Banker da Volantis Wealth</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="disclaimer">A Volantis Wealth integra o ecossistema da AWT Alliance S.A. e atua em educação financeira e planejamento financeiro e patrimonial. Serviços sujeitos a regulação são prestados pelas empresas do AWT Group devidamente habilitadas para cada atividade. A administração e gestão de carteiras de valores mobiliários é realizada pela AWT Consultoria e Administração de Valores Mobiliários Ltda., CNPJ 35.137.445/0001-00, registrada perante a CVM.<br>Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+</header>
+
+<main>
+<section class="block" id="sobre">
+  <div class="wrap about">
+    <div class="about-text" data-reveal>
+      <h2>Conhecimento técnico, explicado com clareza.</h2>
+      <p class="lead">Helton Costa une conhecimento técnico e experiência prática a uma abordagem humana e educativa. O trabalho começa pela escuta e segue com comunicação clara e uma relação de confiança de longo prazo.</p>
+      <div class="facts">
+        <div><b>15 anos</b><span>de acompanhamento individualizado de pessoas</span></div>
+        <div><b>10+ anos</b><span>de experiência prática, cuidando do próprio patrimônio</span></div>
+        <div><b>CPA</b><span>com as certificações C-Pro R e C-Pro I</span></div>
+        <div><b>MBA</b><span>especialização concluída na área</span></div>
+      </div>
+    </div>
+    <figure class="portrait" data-reveal>
+      <img src="img/helton-costa.jpg" alt="Helton Costa, Banker da Volantis Wealth" width="1024" height="1024" loading="lazy">
+      <figcaption><strong>Helton Costa</strong><span>Banker da Volantis Wealth</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block spec" id="especialidades">
+  <div class="wrap head" data-reveal>
+    <h2>Uma única estratégia de planejamento</h2>
+    <p>Cinco frentes que conversam entre si, para que cada decisão considere o conjunto da sua vida financeira. Arraste para conhecer.</p>
+  </div>
+  <div class="belt" id="belt" aria-label="Especialidades. Arraste para os lados.">
+    <article class="card"><img src="img/trilha.jpg" alt="Pessoa caminhando em uma trilha de montanha" width="960" height="720" loading="lazy"><div><h3>Planejamento para investimentos</h3><p>Estratégias para acumular, proteger e multiplicar seu patrimônio.</p><small>Renda Fixa, Renda Variável e Multimercado</small></div></article>
+    <article class="card"><img src="img/casal-praia.jpg" alt="Casal caminhando na praia ao pôr do sol" width="960" height="640" loading="lazy"><div><h3>Previdência</h3><p>Estratégias para conquistar eficiência tributária e sucessória.</p></div></article>
+    <article class="card"><img src="img/asa.jpg" alt="Asa de avião sobre as nuvens" width="960" height="640" loading="lazy"><div><h3>Internacional e Offshore</h3><p>Estratégias para diversificação geográfica e proteção em moeda forte.</p></div></article>
+    <article class="card"><img src="img/imovel.jpg" alt="Casa nova com fachada iluminada" width="960" height="640" loading="lazy"><div><h3>Imobiliário</h3><p>Planejamento para aquisição de imóveis, consórcios e financiamentos.</p></div></article>
+    <article class="card"><img src="img/geracoes.jpg" alt="Pais e filho pequeno juntos na cozinha" width="960" height="640" loading="lazy"><div><h3>Sucessório e Holding</h3><p>Estratégias para desenhar estruturas societárias e perpetuar legado.</p></div></article>
+  </div>
+  <div class="controls"><button class="round" data-belt="-1" aria-label="Especialidade anterior">←</button><span>Arraste</span><button class="round" data-belt="1" aria-label="Próxima especialidade">→</button></div>
+</section>
+
+<section class="block who" id="para-quem" data-tone="0">
+  <div class="wrap stage">
+    <div class="who-info" data-reveal>
+      <h2>Para quem construiu e quer continuar construindo.</h2>
+      <p style="max-width:46ch">Cada profissão tem sua própria rotina de renda e seus próprios objetivos. O planejamento parte disso. Arraste o cartão para ver cada perfil.</p>
+      <div class="tabs" id="tabs">
+        <button aria-pressed="true">Empresários</button><button aria-pressed="false">Profissionais liberais</button><button aria-pressed="false">Executivos</button><button aria-pressed="false">Servidores públicos</button>
+      </div>
+      <div class="controls"><button class="round" data-deck="-1" aria-label="Perfil anterior">←</button><button class="round" data-deck="1" aria-label="Próximo perfil">→</button></div>
+    </div>
+    <div class="deck" id="deck" aria-label="Perfis atendidos. Arraste o cartão.">
+      <article class="slide"><img src="img/familia.jpg" alt="Família passeando em um parque arborizado" width="960" height="640" loading="lazy"><div><h3>Empresários</h3><p>Separar o que é da empresa do que é da família, planejar a sucessão e proteger o que foi construído.</p></div></article>
+      <article class="slide"><img src="img/anotacoes.jpg" alt="Profissional organizando anotações" width="960" height="640" loading="lazy"><div><h3>Profissionais liberais</h3><p>Organizar uma renda que varia, formar reservas e preparar a independência financeira.</p></div></article>
+      <article class="slide"><img src="img/asa.jpg" alt="Vista da janela de um avião acima das nuvens" width="960" height="640" loading="lazy"><div><h3>Executivos</h3><p>Dar destino a bônus e rendimentos, olhar para o exterior e definir quando a aposentadoria será possível.</p></div></article>
+      <article class="slide"><img src="img/leitura.jpg" alt="Família lendo um livro reunida" width="960" height="640" loading="lazy"><div><h3>Servidores públicos</h3><p>Complementar a aposentadoria, proteger a família e transformar estabilidade em patrimônio.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="como">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <h2>Como funciona</h2>
+      <p class="lead">Quatro etapas simples, com acompanhamento individual do começo ao fim.</p>
+    </div>
+    <ol class="steps" data-reveal>
+      <li><em>1</em><div><h3>Conversa inicial</h3><p>Ouvimos sua história, sua rotina e o que você quer realizar.</p></div></li>
+      <li><em>2</em><div><h3>Diagnóstico</h3><p>Organizamos o retrato atual do patrimônio, da renda e das responsabilidades.</p></div></li>
+      <li><em>3</em><div><h3>Plano</h3><p>Definimos prioridades e prazos, com cada escolha explicada em linguagem clara.</p></div></li>
+      <li><em>4</em><div><h3>Acompanhamento</h3><p>Revisamos o plano ao longo do tempo, conforme a vida muda.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block purpose" id="proposito">
+  <div class="wrap">
+    <div class="mv" data-reveal>
+      <article><h2>Missão</h2><p>Transformar patrimônio em estratégia para realizar objetivos, proteger famílias e construir segurança financeira no longo prazo, por meio de um planejamento patrimonial independente, transparente e alinhado aos interesses de cada cliente.</p></article>
+      <article><h2>Visão</h2><p>Ser referência em planejamento patrimonial independente, reconhecida pela confiança, pela excelência técnica e pelo compromisso com a proteção e o desenvolvimento do patrimônio ao longo das gerações.</p></article>
+    </div>
+    <ul class="values" data-reveal>
+      <li><strong>Transparência</strong><span>Você entende o que está sendo proposto e por quê.</span></li>
+      <li><strong>Respeito</strong><span>Seu momento, sua história e suas escolhas são considerados.</span></li>
+      <li><strong>Responsabilidade</strong><span>Cada orientação é preparada com cuidado e critério.</span></li>
+      <li><strong>Independência</strong><span>O ponto de partida é o interesse de cada cliente.</span></li>
+      <li><strong>Honestidade</strong><span>Conversas francas, inclusive sobre limites e riscos.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <img src="img/reflexo.jpg" alt="Montanha e céu refletidos na água ao entardecer" width="960" height="640" loading="lazy">
+  <div class="wrap">
+    <div class="contact-box" data-reveal>
+      <h2>Vamos conversar sobre o seu plano?</h2>
+      <p>Fale diretamente com Helton Costa e conte o que você quer construir.</p>
+      <div class="hero-cta">
+        <a class="btn btn-brass" href="https://wa.me/5553999425884" target="_blank" rel="noopener">Chamar no WhatsApp <i aria-hidden="true">→</i></a>
+        <a class="btn btn-line" href="mailto:advisoryvolantis@gmail.com">Enviar e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><img src="volantis-wealth-logo-branco.png" alt="Volantis Wealth" width="1600" height="570" loading="lazy"></div>
+    <div><h3>Contato</h3><a href="https://wa.me/5553999425884" target="_blank" rel="noopener">+55 (53) 99942-5884</a><a href="mailto:advisoryvolantis@gmail.com">advisoryvolantis@gmail.com</a></div>
+    <div><h3>Navegação</h3><a href="#sobre">Sobre</a><a href="#especialidades">Especialidades</a><a href="#como">Como funciona</a></div>
+  </div>
+  <p class="wrap legal">Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+  <div class="giant" aria-hidden="true">Volantis</div>
+</footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+/* Esteira infinita de especialidades (arraste com inercia) */
+const belt=document.getElementById('belt');
+const originals=[...belt.children];
+originals.forEach(c=>{const k=c.cloneNode(true);k.setAttribute('aria-hidden','true');belt.appendChild(k)});
+const cards=[...belt.children];
+let stride=384,pos=0,vel=0,target=null,down=false,lastX=0,idle=0,visible=false;
+const size=()=>{stride=cards[0].offsetWidth+24};
+size();addEventListener('resize',size);
+const draw=()=>{const total=stride*cards.length;cards.forEach((c,i)=>{let x=((i*stride-pos)%total+total*1.5)%total-total/2;const d=Math.min(Math.abs(x)/(stride*2.4),1);c.style.transform=`translate3d(${x-c.offsetWidth/2}px,${d*d*34}px,0) rotate(${(x/stride)*1.4}deg) scale(${1-d*.08})`})};
+new IntersectionObserver(e=>visible=e[0].isIntersecting).observe(belt);
+const tick=()=>{if(visible&&!down){if(target!==null){pos+=(target-pos)*.09;if(Math.abs(target-pos)<.5){pos=target;target=null}}else if(Math.abs(vel)>.3){pos+=vel;vel*=.94}else if(performance.now()-idle>1400){pos+=.45}}if(visible)draw();requestAnimationFrame(tick)};
+draw();tick();
+belt.addEventListener('pointerdown',e=>{down=true;lastX=e.clientX;vel=0;target=null;belt.setPointerCapture(e.pointerId);belt.classList.add('drag')});
+belt.addEventListener('pointermove',e=>{if(!down)return;const dx=lastX-e.clientX;pos+=dx;vel=dx;lastX=e.clientX});
+const release=()=>{if(!down)return;down=false;idle=performance.now();belt.classList.remove('drag')};
+belt.addEventListener('pointerup',release);belt.addEventListener('pointercancel',release);
+document.querySelectorAll('[data-belt]').forEach(b=>b.onclick=()=>{vel=0;idle=performance.now()+1600;target=(Math.round((target??pos)/stride)+ +b.dataset.belt)*stride});
+
+/* Baralho circular de perfis: troca a cor da secao */
+const deck=document.getElementById('deck'),who=document.getElementById('para-quem');
+const slides=[...deck.children],tabs=[...document.querySelectorAll('#tabs button')],n=slides.length;
+let cur=0,sx=null,dx=0,last=performance.now(),hover=false;
+const paint=()=>{slides.forEach((s,i)=>{const k=(i-cur+n)%n;s.style.zIndex=n-k;s.style.opacity=k>2?0:1;s.style.transform=`translateX(${Math.min(k,2)*26}px) scale(${1-Math.min(k,2)*.06})`;s.setAttribute('aria-hidden',k!==0)});who.dataset.tone=cur;tabs.forEach((t,i)=>t.setAttribute('aria-pressed',i===cur))};
+const go=i=>{cur=(i+n)%n;last=performance.now();paint()};
+deck.addEventListener('pointerdown',e=>{sx=e.clientX;dx=0;deck.setPointerCapture(e.pointerId);slides[cur].classList.add('live')});
+deck.addEventListener('pointermove',e=>{if(sx===null)return;dx=e.clientX-sx;slides[cur].style.transform=`translateX(${dx}px) rotate(${dx/38}deg)`});
+const drop=()=>{if(sx===null)return;sx=null;slides[cur].classList.remove('live');if(Math.abs(dx)>70)go(cur+(dx<0?1:-1));else{last=performance.now();paint()}};
+deck.addEventListener('pointerup',drop);deck.addEventListener('pointercancel',drop);
+deck.addEventListener('mouseenter',()=>hover=true);deck.addEventListener('mouseleave',()=>{hover=false;last=performance.now()});
+tabs.forEach((t,i)=>t.onclick=()=>go(i));
+document.querySelectorAll('[data-deck]').forEach(b=>b.onclick=()=>go(cur+ +b.dataset.deck));
+let deckSeen=false;new IntersectionObserver(e=>{deckSeen=e[0].isIntersecting;last=performance.now()},{threshold:.4}).observe(deck);
+setInterval(()=>{if(deckSeen&&!hover&&sx===null&&performance.now()-last>5200)go(cur+1)},400);
+paint();
+})();
+</script>
+</body>
+</html>
